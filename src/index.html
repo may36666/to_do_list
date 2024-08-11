@@ -10,20 +10,17 @@
 </head>
 
 <body>
-
-    <h1 class="text-8xl text-center  ">
-        Hello world!
-    </h1>
-    <p class="text-base">test</p>
-    <div id="app" class="text-2xl">
-        <!-- <pre>{{ list }}</pre> 開發用呈現 -->
-        <ul>
-            <li v-for="(item, index) in list" >
-                {{index +1}} - {{ item.name }} 年齡是 {{ item.age}}歲
-            </li>
-        </ul>
+    <div id="app">
+        <div class=" border border-black mb-3 flex flex-row">
+            <div class=" bg-slate-600 m">
+                <span class="" id="basic-addon1">待辦事項</span>
+            </div>
+            <input type="text" class="" placeholder="準備要做的任務">
+            <div class="">
+                <button class="" type="button">新增</button>
+            </div>
+        </div>
     </div>
-
     <script>
         var app = new Vue({
             el: "#app",
