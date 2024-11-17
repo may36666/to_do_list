@@ -11,14 +11,29 @@
 
 <body>
     <div id="app">
-        <div class=" border border-black mb-3 flex flex-row">
-            <div class=" bg-slate-600 m">
-                <span class="" id="basic-addon1">待辦事項</span>
+        <div class=" input-group mb-3">
+            <div class=" input-group-prepend">
+                <span class="input-group-text" id="basic-addon1" v-model="newTodo">待辦事項</span>
             </div>
-            <input type="text" class="" placeholder="準備要做的任務">
-            <div class="">
-                <button class="" type="button">新增</button>
+            <input type="text" class="form-control" placeholder="準備要做的任務" v-model="newTodo">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" @click=>新增</button>
             </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <ul>
+                <li class="">
+                    <a class="" href="#">全部</a>
+                </li>
+                <li class="">
+                    <a class="" href="#">進行中</a>
+                </li>
+                <li class="">
+                    <a class="" href="#">已完成</a>
+                </li>
+            </ul>
         </div>
     </div>
     <script>
