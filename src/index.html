@@ -10,17 +10,21 @@
 </head>
 
 <body>
-    <nav class="bg-slate-500 h-10 ">
-        <a class="text-slate-100" href="/src/index.html">Wayne的待辦網</a>
-    </nav>
-    <div id="app" class="container ms-auto">
-        <div class=" ">
-            <div class=" ">
+    <div class="">
+        <div class="px-6 py-4 bg-slate-500">
+            <div>
+                <a class="text-slate-100" href="/src/index.html">Wayne的待辦網</a>
+            </div>
+        </div>
+    </div>
+    <div id="app" class="w-1/2 container ms-auto ">
+        <div class="mt-10 grid grid-flow-col justify-stretch">
+            <div class="">
                 <span class="" id="basic-addon1" v-model="newTodo">待辦事項</span>
             </div>
-            <input type="text" class="" placeholder="準備要做的任務" v-model="newTodo">
+            <input type="text" class=" pr-20" placeholder="準備要做的任務" v-model="newTodo">
             <div class="">
-                <button class="btn btn-primary" type="button" @click=>新增</button>
+                <button class="btn btn-primary bg-emerald-500 rounded px-2" type="button" @click="addTodo">新增</button>
             </div>
         </div>
 
@@ -58,10 +62,16 @@
             el: "#app",
             data: {
                 newTodo: '',
-                todos: [].
+                todos: [
+                    {
+                        'id': '',
+                        title: '你好',
+                        completed: false
+                    }
+                ],
             },
             methods: {
-                addTodos: function () {
+                addTodo: function () {
 
                 }
 
